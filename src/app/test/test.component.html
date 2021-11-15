@@ -1,0 +1,29 @@
+<div>
+  <h1>Begger Blogger!</h1>
+  <h3 *ngIf="displayName; else elseBlock" >Welcome to the GreatWorld!!</h3>
+
+  <ng-template #elseBlock>
+  <h3>(Name is Hidden!!!OPPS)</h3>
+</ng-template>
+</div>
+<div *ngIf="name; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+    <h1>Boooggg</h1>
+</ng-template>
+<ng-template #elseBlock>
+    <h1>commm!!!</h1>
+</ng-template>
+
+<h1>NG switch</h1>
+<div [ngSwitch]="color">
+<div *ngSwitchCase="'red'">Red</div>
+<div *ngSwitchCase="'blue'">Blue</div>
+</div>
+<div *ngFor="let vehicle of vehicles; index as i">
+    <h1>{{i}} {{vehicle}}</h1>
+</div>
+
+
+
+
+
